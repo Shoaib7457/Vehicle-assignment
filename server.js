@@ -8,13 +8,13 @@ const app = express();
 const PORT = 5000;
 app.use(cors());
 
-// Serve static files from the React app
-app.use(express.static(path.join(__dirname, 'maps/build')));
+// // Serve static files from the React app
+// app.use(express.static(path.join(__dirname, 'maps/build')));
 
-// Serve React app for any unhandled routes
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'maps/build', 'index.html'));
-});
+// // Serve React app for any unhandled routes
+// app.get('*', (req, res) => {
+//   res.sendFile(path.join(__dirname, 'maps/build', 'index.html'));
+// });
 
 app.get('/api/vehicle', (req, res) => {
   const dataPath = path.join('data', 'vehicledata.json');
