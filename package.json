@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "install": "cd maps && npm install",
-    "build": "cd maps && npm run build && cd maps && npm start",
-    "start": "npm install && node server.js",
+    "build": "npm install && cd maps && npm run build",
+    "start": "node server.js && cd maps && npm start",
   },
   "keywords": [],
   "author": "",
