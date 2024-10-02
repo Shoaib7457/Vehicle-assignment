@@ -16,20 +16,20 @@ app.use(cors());
 //   res.sendFile(path.join(__dirname, 'maps/build', 'index.html'));
 // });
 
-app.get('/api/vehicle', (req, res) => {
-  const dataPath = path.join('data', 'vehicledata.json');
+// app.get('/api/vehicle', (req, res) => {
+//   const dataPath = path.join('data', 'vehicledata.json');
   
-  fs.readFile(dataPath, 'utf8', (err, data) => {
-    if (err) {
-      console.error('Error reading vehicle data:', err);
-      return res.status(500).json({ error: 'Internal Server Error' });
-    }
+//   fs.readFile(dataPath, 'utf8', (err, data) => {
+//     if (err) {
+//       console.error('Error reading vehicle data:', err);
+//       return res.status(500).json({ error: 'Internal Server Error' });
+//     }
 
-    // Parse and send the data as JSON
-    const vehicleData = JSON.parse(data);
-    res.json(vehicleData);
-  });
-});
+//     // Parse and send the data as JSON
+//     const vehicleData = JSON.parse(data);
+//     res.json(vehicleData);
+//   });
+// });
 
 let currentIndex = 0;
 
