@@ -6,10 +6,7 @@ const path = require('path');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
-app.use(cors({
-    origin: 'https://vehicle-assignment.onrender.com/', // allow requests from your frontend
-    credentials: true
-}));
+app.use(cors());
 // // Serve static files from the React app
 app.use(express.static(path.join(__dirname, 'maps/build')));
 
@@ -61,6 +58,6 @@ app.get('/api/vehicle/current', (req, res) => {
 });
 
 
-app.listen(PORT, '0.0.0.0', () => {
+app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
