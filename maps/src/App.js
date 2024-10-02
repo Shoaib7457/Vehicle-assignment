@@ -8,7 +8,7 @@ function App() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      fetch('https://vehicle-assignment.onrender.com') // Fetch from backend
+      fetch('http://localhost:10000/api/vehicle/current') // Fetch from backend
         .then((response) => response.json())
         .then((data) => {
           const newPosition = [data.latitude, data.longitude];
