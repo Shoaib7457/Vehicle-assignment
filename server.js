@@ -45,11 +45,11 @@ app.get('/api/vehicle/current', (req, res) => {
     const vehicleData = JSON.parse(data);
     
     // Simulate real-time vehicle data by incrementing index
-    if (currentIndex >= vehicledata.length) {
+    if (currentIndex >= vehicleData.length) {
       currentIndex = 0;
     }
     
-    const currentVehiclePosition = vehicledata[currentIndex];
+    const currentVehiclePosition = vehicleData[currentIndex];
     currentIndex++;
 
     res.json(currentVehiclePosition);
