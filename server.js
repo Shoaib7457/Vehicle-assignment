@@ -7,7 +7,7 @@ const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 5000;
 app.use(cors({
-    origin: 'https://your-frontend-app.onrender.com', // allow requests from your frontend
+    origin: 'https://vehicle-assignment.onrender.com/', // allow requests from your frontend
     credentials: true
 }));
 // // Serve static files from the React app
