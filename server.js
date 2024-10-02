@@ -9,7 +9,7 @@ const PORT = 5000;
 app.use(cors());
 
 // // Serve static files from the React app
-// app.use(express.static(path.join(__dirname, 'maps/build')));
+app.use(express.static(path.join(__dirname, 'maps/build')));
 
 // // Serve React app for any unhandled routes
 // app.get('*', (req, res) => {
