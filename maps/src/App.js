@@ -16,7 +16,7 @@ function App() {
           setRoutePath((prevPath) => [...prevPath, newPosition]);
         })
         .catch((error) => console.error('Error fetching vehicle data:', error));
-    }, 700);
+    }, 1500);
 
     return () => clearInterval(interval);
   }, []);
