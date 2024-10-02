@@ -6,7 +6,7 @@
   "scripts": {
     "install": "cd maps && npm install",
     "build": "npm install && cd maps && npm run build",
-    "start": "cd maps && npm run start"
+    "start": "cd maps && npm start"
   },
   "keywords": [],
   "author": "",
