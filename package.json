@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "install": "cd ./maps && npm install",
+    "install": "cd maps && npm install",
     "build": "npm run install && npm run build",
     "heroku-postbuild": "npm run build",
     "start": "node server.js"
