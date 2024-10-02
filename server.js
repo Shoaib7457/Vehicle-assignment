@@ -31,10 +31,11 @@ app.get('*', (req, res) => {
 //   });
 // });
 
-
-
-app.get('/api/vehicle/current', (req, res) => {
+let currentIndex = 0;
+app.get("/" , (req , res) =>{
   let currentIndex = 0;
+}
+app.get('/api/vehicle/current', (req, res) => {
   const dataPath = path.join(__dirname, 'data', 'vehicledata.json');
 
   fs.readFile(dataPath, 'utf8', (err, data) => {
