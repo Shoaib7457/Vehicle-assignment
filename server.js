@@ -12,9 +12,9 @@ app.use(cors());
 app.use(express.static(path.join(__dirname, 'maps/build')));
 
 // // Serve React app for any unhandled routes
-// app.get('*', (req, res) => {
-//   res.sendFile(path.join(__dirname, 'maps/build', 'index.html'));
-// });
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'maps/build', 'index.html'));
+});
 
 // app.get('/api/vehicle', (req, res) => {
 //   const dataPath = path.join('data', 'vehicledata.json');
