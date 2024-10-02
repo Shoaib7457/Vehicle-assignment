@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "install": "cd maps && npm install",
-    "build": "cd ..  && npm install && cd maps && npm run build",
+    "build": "npm install && cd maps && npm run build",
     "start": "node server.js"
   },
   "keywords": [],
