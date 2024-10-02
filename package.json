@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "install": "cd maps && npm install",
-    "build": "npm install && cd maps && npm run build",
-    "start": "node server.js"
+    "install": "npm run start && cd maps && npm install",
+    "start": "npm install && node server.js"
+    "build": "cd maps && npm run build && cd maps && npm start",
   },
   "keywords": [],
   "author": "",
