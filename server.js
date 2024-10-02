@@ -34,7 +34,7 @@ app.use(express.static(path.join(__dirname, 'maps/build')));
 let currentIndex = 0;
 
 app.get('/api/vehicle/current', (req, res) => {
-  const dataPath = path.join(__dirname, 'data', 'vehicleData.json');
+  const dataPath = path.join(__dirname, 'data', 'vehicledata.json');
 
   fs.readFile(dataPath, 'utf8', (err, data) => {
     if (err) {
@@ -45,11 +45,11 @@ app.get('/api/vehicle/current', (req, res) => {
     const vehicleData = JSON.parse(data);
     
     // Simulate real-time vehicle data by incrementing index
-    if (currentIndex >= vehicleData.length) {
+    if (currentIndex >= vehicledata.length) {
       currentIndex = 0;
     }
     
-    const currentVehiclePosition = vehicleData[currentIndex];
+    const currentVehiclePosition = vehicledata[currentIndex];
     currentIndex++;
 
     res.json(currentVehiclePosition);
