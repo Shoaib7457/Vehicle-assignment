@@ -28,19 +28,6 @@ function App() {
     </div>
   );
 }
-const MyComponent = () => {
-  useEffect(() => {
-    const handleBeforeUnload = (event) => {
-      event.preventDefault();
-      // Custom logic to handle the refresh
-      // Display a confirmation message or perform necessary actions
-    };
-    window.addEventListener('beforeunload', handleBeforeUnload);
-    return () => {
-      window.removeEventListener('beforeunload', handleBeforeUnload);
-    };
-  }, []);
-  return <div>My Component</div>;
-};
+
 
 export default App;
